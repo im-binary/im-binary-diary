@@ -1,3 +1,23 @@
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { fetchDiaryList } from "../services/diary";
+
 export default function DiaryList() {
-  return <h1>DiaryList</h1>;
+  const [diaryList, setDiaryList] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const { data } = await fetchDiaryList();
+      setDiaryList(data.list);
+    })();
+  }, []);
+  return (
+    <div>
+      {diaryList.map((diary) => (
+        <ul key={diary.path}>
+          <Link href={`/diary-detail/${diary.path}`}>{diary.name}</Link>
+        </ul>
+      ))}
+    </div>
+  );
 }
