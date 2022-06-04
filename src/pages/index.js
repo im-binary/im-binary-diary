@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 export default function Home() {
-  const router = useRouter();
+  //   const router = useRouter();
 
   return (
     <div className={styles.container}>
@@ -15,14 +15,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Link href='/about-me'>About Me</Link>
-        <button
+        {/* <button
           onClick={() => {
             router.push("/contact");
           }}
         >
           연락하기
-        </button>
+        </button> */}
+
+        <Link href='/diary-list'>Diary List</Link>
       </main>
     </div>
   );
