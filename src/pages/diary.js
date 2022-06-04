@@ -15,7 +15,7 @@ export default function DiaryList() {
     <div>
       {diaryList.map((diary) => (
         <ul key={diary.path}>
-          <Link href={`/diary-detail/${diary.path}`}>{diary.name}</Link>
+          <Link href={`/diary/${diary.path}`}>{diary.name}</Link>
         </ul>
       ))}
     </div>

@@ -1,7 +1,7 @@
 import { get } from "./api";
 
-export async function fetchDiaryList() {
-  return await get("/api/diary-list");
+export async function fetchDiaryList(category = "daily") {
+  return await get("/api/diary-list", { category });
 }
 
 export async function fetchDiaryDetail(path) {

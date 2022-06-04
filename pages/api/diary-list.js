@@ -5,11 +5,13 @@ const octokit = new Octokit({
 });
 
 export default async function handler(req, res) {
+  const category = req.query.category;
   const { data } = await octokit.rest.repos.getContent({
     owner: "pongdang",
     repo: "pongdang-diary-storage",
-    path: "/diary",
+    path: `/${category}`,
   });
+
   const list = data.map((diary) => ({ name: diary.name, path: diary.path }));
 
   res.status(200).json({ list });
