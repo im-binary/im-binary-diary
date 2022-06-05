@@ -12,12 +12,51 @@ export default function DiaryList() {
     })();
   }, []);
   return (
-    <div>
-      {diaryList.map((diary) => (
-        <ul key={diary.path}>
-          <Link href={`/diary/${diary.path}`}>{diary.name}</Link>
-        </ul>
-      ))}
-    </div>
+    <nav>
+      <ul>
+        {diaryList.map((diary) => (
+          <>
+            <li key={diary.path}>
+              <Link href={`/diary/${diary.path}`}>
+                <a>{diary.name}</a>
+              </Link>
+            </li>
+            <li key={diary.path}>
+              <Link href={`/diary/${diary.path}`}>
+                <a>{diary.name}</a>
+              </Link>
+            </li>
+            <li key={diary.path}>
+              <Link href={`/diary/${diary.path}`}>
+                <a>{diary.name}</a>
+              </Link>
+            </li>
+          </>
+        ))}
+      </ul>
+      <style jsx>{`
+        nav {
+          border: 1px solid;
+          height: calc(60vh - 30%);
+          line-height: 1.9;
+          overflow: scroll;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          gap: 1rem;
+        }
+        li {
+          border: 1px solid;
+        }
+        a {
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          padding: 1.5rem;
+        }
+      `}</style>
+    </nav>
   );
 }

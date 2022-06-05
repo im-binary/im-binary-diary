@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import GoBackButton from "../components/GoBackButton";
 import { fetchDiaryDetail } from "../services/diary";
 
 export default function DiaryDetail() {
@@ -27,5 +28,18 @@ export default function DiaryDetail() {
     })();
   }, [path]);
 
-  return <div>{content}</div>;
+  return (
+    <>
+      <main>{content}</main>
+      <GoBackButton />
+      <style jsx>{`
+        main {
+          white-space: pre-wrap;
+          height: calc(60vh - 30%);
+          line-height: 1.6;
+          overflow: scroll;
+        }
+      `}</style>
+    </>
+  );
 }
