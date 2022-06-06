@@ -30,14 +30,13 @@ export default function DiaryDetail() {
 
   return (
     <>
-      <main>{content}</main>
       <GoBackButton />
+      <main>{content}</main>
       <style jsx>{`
         main {
           white-space: pre-wrap;
-          height: calc(60vh - 30%);
           line-height: 1.6;
-          overflow: scroll;
+          padding: 2rem;
         }
       `}</style>
     </>
