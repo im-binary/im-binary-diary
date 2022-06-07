@@ -1,14 +1,11 @@
+import CloudAnimation from "./CloudAnimation";
 import Title from "./Title";
 
 export default function Layout({ children }) {
   return (
     <section className='app-container'>
       <Title />
-      <div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src='/cloud.png' alt='cloud' />
-      </div>
-
+      <CloudAnimation />
       <section>{children}</section>
       <style jsx>{`
         .app-container {
@@ -25,21 +22,6 @@ export default function Layout({ children }) {
           overflow: scroll;
           height: 500px;
           color: #f5f5f5;
-        }
-
-        img {
-          width: 100px;
-          animation: motion 0.6s linear 0s infinite alternate;
-          margin-top: 0;
-        }
-
-        @keyframes motion {
-          0% {
-            margin-top: 0px;
-          }
-          100% {
-            margin-top: 10px;
-          }
         }
       `}</style>
     </section>
