@@ -32,8 +32,6 @@ export default function DiaryList() {
       <style jsx>{`
         nav {
           line-height: 1.9;
-          overflow: scroll;
-          height: 500px;
           font-family: "Jua", sans-serif;
         }
         ul {
