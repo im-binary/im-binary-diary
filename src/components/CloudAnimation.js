@@ -1,25 +1,59 @@
 export default function CloudAnimation() {
   return (
-    <div>
+    <div className='container'>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src='/cloud.png' alt='cloud' />
+      <img className='img-moon' src='/moon.png' alt='moon' />
+      <div className='cloud-container'>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className='img-cloud' src='/cloud.png' alt='cloud' />
+      </div>
+
       <style jsx>{`
-        div {
+        .container {
           width: 100%;
-          animation: flow 6s linear 0s infinite alternate;
+          text-align: center;
+          position: relative;
         }
 
-        img {
-          width: 150px;
-          margin-top: 0;
+        .img-moon {
+          width: 100px;
+          margin: 0 auto;
+        }
+
+        .cloud-container {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          top: 77%;
+          left: 50%;
+        }
+
+        .img-cloud {
+          width: 200px;
+          animation: flow 5s linear 0s infinite alternate;
         }
 
         @keyframes flow {
           from {
-            transform: translate(0, 0);
+            transform: translate(-40%, 0);
           }
           to {
-            transform: translate(80%, 0);
+            transform: translate(40%, 0);
+          }
+
+          0% {
+            opacity: 0.6;
+          }
+          25% {
+            opacity: 0.8;
+          }
+          50% {
+            opacity: 1;
+          }
+          75% {
+            opacity: 0.8;
+          }
+          100% {
+            opacity: 0.6;
           }
         }
       `}</style>
