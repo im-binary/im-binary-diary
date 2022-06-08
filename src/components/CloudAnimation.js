@@ -56,12 +56,6 @@ export default function CloudAnimation() {
             opacity: 0.6;
           }
         }
-
-        @media all and (orientation: landscape) {
-          .container {
-            display: none;
-          }
-        }
       `}</style>
     </div>
   );
