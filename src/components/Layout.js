@@ -22,6 +22,13 @@ export default function Layout({ children }) {
           overflow: scroll;
           height: 500px;
           color: #f5f5f5;
+          z-index: 999;
+        }
+
+        @media all and (max-device-height: 907px) {
+          .app-container section {
+            margin-top: 30px;
+          }
         }
       `}</style>
     </section>
