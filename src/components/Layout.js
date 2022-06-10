@@ -1,36 +1,29 @@
 import CloudAnimation from "./CloudAnimation";
+import Footer from "./Footer";
 import Title from "./Title";
 
 export default function Layout({ children }) {
   return (
-    <section className='app-container'>
-      <Title />
-      <CloudAnimation />
-      <section>{children}</section>
-      <style jsx>{`
-        .app-container {
-          border-radius: 20px;
-          height: 90vh;
-          padding: 1rem 1.5rem;
-          margin: 0 1rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          background-color: #2b2b2b;
-        }
-        .app-container section {
-          overflow: scroll;
-          height: 500px;
-          color: #f5f5f5;
-          z-index: 999;
-        }
-
-        @media all and (max-device-height: 907px) {
-          .app-container section {
-            margin-top: 30px;
+    <>
+      <section className='app-container'>
+        <Title />
+        <CloudAnimation />
+        <section>{children}</section>
+        <style jsx>{`
+          .app-container {
+            padding: 1.5rem 1rem 0;
           }
-        }
-      `}</style>
-    </section>
+
+          .app-container section {
+            /* height: calc(100vh - 385px); */
+            height: calc(100vh - 305px);
+            overflow: scroll;
+            color: #f5f5f5;
+            z-index: 999;
+          }
+        `}</style>
+      </section>
+      <Footer />
+    </>
   );
 }
