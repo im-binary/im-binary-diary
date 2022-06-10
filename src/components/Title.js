@@ -11,11 +11,11 @@ export default function Title() {
       </Head>
       <header>
         <HelloDate />
-        <h1>PONGDANG DIARY</h1>
+        <h1>DIARY</h1>
         <style jsx>{`
           header {
             display: flex;
-            flex-wrap: wrap;
+            height: 100px;
             justify-content: space-between;
             align-items: center;
             gap: 2px;

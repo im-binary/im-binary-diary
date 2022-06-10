@@ -11,8 +11,10 @@ export default function CloudAnimation() {
       <style jsx>{`
         .container {
           width: 100%;
+          height: 135px;
           text-align: center;
           position: relative;
+          margin-bottom: 30px;
         }
 
         .img-moon {
@@ -23,7 +25,7 @@ export default function CloudAnimation() {
         .cloud-container {
           position: absolute;
           transform: translate(-50%, -50%);
-          top: 77%;
+          top: 62%;
           left: 50%;
         }
 
@@ -56,6 +58,12 @@ export default function CloudAnimation() {
             opacity: 0.6;
           }
         }
+        
+        @media (max-width: 422px) {
+          .img-cloud {
+            width: 150px;
+        }
+
       `}</style>
     </div>
   );
