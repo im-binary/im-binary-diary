@@ -6,7 +6,9 @@ export default function GoBackButton() {
       뒤로가기
       <style jsx>{`
         button {
-          position: fixed;
+          position: absolute;
+          top: 10px;
+          right: 12px;
         }
       `}</style>
     </button>
