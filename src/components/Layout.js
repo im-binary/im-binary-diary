@@ -20,6 +20,7 @@ export default function Layout({ children }) {
             overflow: scroll;
             color: #f5f5f5;
             z-index: 999;
+            position: relative;
           }
         `}</style>
       </section>
