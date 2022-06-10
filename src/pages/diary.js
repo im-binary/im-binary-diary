@@ -34,6 +34,7 @@ export default function DiaryList() {
           line-height: 1.9;
           font-family: "Jua", sans-serif;
         }
+
         ul {
           padding: 1rem 1.5rem;
           gap: 1.3rem;
@@ -63,13 +64,12 @@ export default function DiaryList() {
           font-size: 1.2rem;
         }
 
-      
-
         @media (max-width: 800px) {
           ul {
             grid-template-columns: 1fr 1fr;
           }
         }
+        
         @media (max-width: 559px) {
           ul {
             grid-template-columns: 1fr;
