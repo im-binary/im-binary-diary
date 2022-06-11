@@ -37,7 +37,7 @@ export default function DiaryDetail() {
       </main>
       <style jsx>{`
         main {
-          border: 1px solid;
+          background-color: #3a3a3a;
           border-radius: 10px;
           white-space: pre-wrap;
           line-height: 1.6;
