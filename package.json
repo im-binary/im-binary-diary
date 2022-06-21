@@ -12,7 +12,8 @@
     "lru-cache": "^7.10.1",
     "next": "12.1.4",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "eslint": "8.12.0",
