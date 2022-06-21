@@ -15,7 +15,7 @@ export default function CloudAnimation({ toggle, mode }) {
       ) : (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className='img-moon' src='/sun.png' alt='sun' />
+          <img className='img-sun' src='/sun.png' alt='sun' />
           <div className='cloud-container' onClick={toggle}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className='img-cloud' src='/cloud.png' alt='cloud' />
@@ -31,7 +31,8 @@ export default function CloudAnimation({ toggle, mode }) {
           margin-bottom: 30px;
         }
 
-        .img-moon {
+        .img-moon,
+        .img-sun {
           width: 100px;
           margin: 0 auto;
         }
