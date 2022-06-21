@@ -24,7 +24,7 @@ export default function Footer({ className }) {
       }}
     >
       <Pongdang />
-      <span style={{ color: "#f5f5f5" }}>All rights reserved.</span>
+      <span className='footer-text'>All rights reserved.</span>
     </footer>
   );
 }

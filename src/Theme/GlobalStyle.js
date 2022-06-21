@@ -17,4 +17,9 @@ export const GlobalStyle = createGlobalStyle`
    background-color:${({ theme }) => theme.detailBgColor};
  }
  
+ .footer-text {
+   color:${({ theme }) => theme.color};
+
+ }
+ 
 `;
