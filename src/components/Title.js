@@ -21,7 +21,6 @@ export default function Title() {
             gap: 2px;
             margin: 0 1.3rem 1rem;
             font-family: "Jua", sans-serif;
-            color: #f5f5f5;
           }
         `}</style>
       </header>

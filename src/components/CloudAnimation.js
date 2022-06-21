@@ -1,13 +1,27 @@
-export default function CloudAnimation() {
-  return (
-    <div className='container'>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className='img-moon' src='/moon.png' alt='moon' />
-      <div className='cloud-container'>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className='img-cloud' src='/cloud.png' alt='cloud' />
-      </div>
+import { css } from "styled-components";
 
+export default function CloudAnimation({ toggle, mode }) {
+  return (
+    <div className='container' css={container}>
+      {mode === "dark" ? (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className='img-moon' src='/moon.png' alt='moon' />
+          <div className='cloud-container' onClick={toggle}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className='img-cloud' src='/cloud.png' alt='cloud' />
+          </div>
+        </>
+      ) : (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className='img-moon' src='/sun.png' alt='sun' />
+          <div className='cloud-container' onClick={toggle}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className='img-cloud' src='/cloud.png' alt='cloud' />
+          </div>
+        </>
+      )}
       <style jsx>{`
         .container {
           width: 100%;
@@ -58,13 +72,15 @@ export default function CloudAnimation() {
             opacity: 0.6;
           }
         }
-        
+
         @media (max-width: 422px) {
           .img-cloud {
             width: 150px;
+          }
         }
-
       `}</style>
     </div>
   );
 }
+
+const container = css``;

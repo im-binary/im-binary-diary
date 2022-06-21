@@ -31,13 +31,12 @@ export default function DiaryDetail() {
   return (
     <>
       <GoBackButton />
-      <main>
+      <main className='diary-detail-container'>
         <h2>{path}</h2>
         <p>{content}</p>
       </main>
       <style jsx>{`
         main {
-          background-color: #3a3a3a;
           border-radius: 10px;
           white-space: pre-wrap;
           line-height: 1.6;
