@@ -5,10 +5,13 @@ import Title from "./Title";
 
 export default function Layout({ children }) {
   const [themeMode, toggleTheme] = useTheme();
+  const CurrentMode = themeMode === "light" ? "light mode🤍" : "dark mode🖤";
+  console.log(themeMode);
   return (
     <>
       <section className='app-container'>
         <Title />
+        <h2>Current mode is {CurrentMode}</h2>
         <CloudAnimation toggle={toggleTheme} mode={themeMode} />
         <section>{children}</section>
         <style jsx>{`
