@@ -5,6 +5,7 @@ export const lightTheme = {
   bgColor: "#E4EBF5",
   detailBgColor: "#fefefe",
   boxShadow: "-3px -3px 7px 0px #fff, 3px 3px 7px 1px #c8d0e7",
+  insetBoxShadow: "inset .2rem .2rem .5rem #c8d0e7, inset -.2rem -.2rem .5rem #fff",
 };
 
 export const darkTheme = {
@@ -12,6 +13,7 @@ export const darkTheme = {
   bgColor: "#2b2b2b",
   detailBgColor: "#3a3a3a",
   boxShadow: "-3px -3px 7px 0px  #7f879047, 3px 3px 7px 1px rgb(0 0 0 / 20%)",
+  insetBoxShadow: "inset .2rem .2rem .5rem rgb(0 0 0 / 20%), inset -.2rem -.2rem .5rem #7f879047",
 };
 
 export const theme = {

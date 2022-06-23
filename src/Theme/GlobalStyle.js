@@ -14,15 +14,24 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  .diary-box {
-  box-shadow: ${({ theme }) => theme.boxShadow};
+    box-shadow: ${({ theme }) => theme.boxShadow};
+ }
+
+ .diary-box:active {
+    box-shadow: ${({ theme }) => theme.insetBoxShadow};
  }
 
  .diary-detail-container {
-   background-color:${({ theme }) => theme.detailBgColor};
+    background-color:${({ theme }) => theme.detailBgColor};
+ }
+
+ .backspace-button {
+    background-color:${({ theme }) => theme.bgColor};
+    color:${({ theme }) => theme.color};
  }
  
  .footer-text {
-   color:${({ theme }) => theme.color};
+    color:${({ theme }) => theme.color};
 
  }
  

@@ -48,13 +48,9 @@ export default function DiaryList() {
         }
 
         li:hover {
-          transform: scale(1.03);
+          color: #4747ff;
         }
 
-        li:active {
-          transform: scale(0.99);
-        }
-        
         a {
           display: inline-block;
           text-align: center;
