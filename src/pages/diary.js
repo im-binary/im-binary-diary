@@ -21,7 +21,7 @@ export default function DiaryList() {
       <nav>
         <ul>
           {diaryList.map((diary) => (
-            <li key={diary.path}>
+            <li className='diary-box' key={diary.path}>
               <Link href={`/diary/${diary.path}`}>
                 <a>{diary.name}</a>
               </Link>
@@ -45,7 +45,6 @@ export default function DiaryList() {
         li {
           border-radius: 10px;
           transition: all 0.4s;
-          box-shadow: -5px -5px 7px -1px #7f879047, 4px 4px 6px 1px rgb(0 0 0 / 20%);
         }
 
         li:hover {
@@ -53,7 +52,7 @@ export default function DiaryList() {
         }
 
         li:active {
-          transform: scale(0.98);
+          transform: scale(0.99);
         }
         
         a {

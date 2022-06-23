@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
     color:${({ theme }) => theme.color};
  }
 
+ .diary-box {
+  box-shadow: ${({ theme }) => theme.boxShadow};
+ }
+
  .diary-detail-container {
    background-color:${({ theme }) => theme.detailBgColor};
  }
