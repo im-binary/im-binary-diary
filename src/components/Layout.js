@@ -6,7 +6,6 @@ import Title from "./Title";
 export default function Layout({ children }) {
   const [themeMode, toggleTheme] = useTheme();
   const CurrentMode = themeMode === "light" ? "light mode🤍" : "dark mode🖤";
-  console.log(themeMode);
   return (
     <>
       <section className='app-container'>
@@ -20,7 +19,6 @@ export default function Layout({ children }) {
           }
 
           .app-container section {
-            /* height: calc(100vh - 385px); */
             height: calc(100vh - 305px);
             overflow: scroll;
             z-index: 999;
