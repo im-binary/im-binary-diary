@@ -7,6 +7,7 @@ export default function DiaryDetail() {
   const router = useRouter();
   const [path, setPath] = useState(null);
   const [content, setContent] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (router.query.path == null) {
@@ -23,12 +24,16 @@ export default function DiaryDetail() {
     }
 
     (async () => {
+      setLoading(true);
       const { data } = await fetchDiaryDetail(path);
       setContent(data.content);
+      setLoading(false);
     })();
   }, [path]);
 
-  return (
+  return loading ? (
+    <h1>로딩</h1>
+  ) : (
     <>
       <GoBackButton />
       <main className='diary-detail-container'>
