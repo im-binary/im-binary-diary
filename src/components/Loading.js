@@ -23,7 +23,7 @@ export default function Loading() {
 
         h2 {
           width: 100px;
-          height: 22px;
+          height: 24px;
           border-radius: 10px;
         }
 
