@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import GoBackButton from "../components/GoBackButton";
 import { fetchDiaryDetail } from "../services/diary";
+import Loading from "../components/Loading";
 
 export default function DiaryDetail() {
   const router = useRouter();
@@ -32,7 +33,7 @@ export default function DiaryDetail() {
   }, [path]);
 
   return loading ? (
-    <h1>로딩</h1>
+    <Loading />
   ) : (
     <>
       <GoBackButton />
