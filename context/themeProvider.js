@@ -5,13 +5,8 @@ import { ThemeProvider as StyledProvider } from "styled-components";
 const ThemeContext = createContext({});
 
 const ThemeProvider = ({ children }) => {
-  const [themeMode, setThemeMode] = useState();
-
-  useEffect(() => {
-    // 안에서 window 객체를 사용
-    const localTheme = window.localStorage.getItem("theme") || "light";
-    setThemeMode(localTheme);
-  }, []);
+  const localTheme = localStorage.getItem("theme") || "light";
+  const [themeMode, setThemeMode] = useState(localTheme);
 
   const themeObject = themeMode === "light" ? lightTheme : darkTheme;
 
@@ -29,14 +24,10 @@ function useTheme() {
   const toggleTheme = useCallback(() => {
     if (themeMode === "light") {
       setThemeMode("dark");
-      if (typeof window !== undefined) {
-        window.localStorage.setItem("theme", "dark");
-      }
+      localStorage.setItem("theme", "dark");
     } else {
       setThemeMode("light");
-      if (typeof window !== undefined) {
-        window.localStorage.setItem("theme", "light");
-      }
+      localStorage.setItem("theme", "light");
     }
   }, [setThemeMode, themeMode]);
 
