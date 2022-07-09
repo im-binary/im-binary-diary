@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/google-font-display */
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
+import Link from "next/link";
 import HelloDate from "./HelloDate";
 
 export default function Title() {
@@ -11,7 +12,11 @@ export default function Title() {
       </Head>
       <header>
         <HelloDate />
-        <h1>DIARY</h1>
+        <h1>
+          <Link href={`/diary`}>
+            <a className='diary-home-btn'>DIARY</a>
+          </Link>
+        </h1>
         <style jsx>{`
           header {
             display: flex;

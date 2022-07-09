@@ -34,5 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     color:${({ theme }) => theme.color};
 
  }
+
+ .diary-home-btn:hover {
+   color:${({ theme }) => theme.hoverColor};
+
+ }
  
 `;
