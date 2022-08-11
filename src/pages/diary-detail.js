@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import GoBackButton from "../components/GoBackButton";
 import { fetchDiaryDetail } from "../services/diary";
-import Loading from "../components/Loading";
 import Head from "next/head";
 
 export default function DiaryDetail() {
@@ -42,7 +41,44 @@ export default function DiaryDetail() {
         <title>Diary | {diaryDate}</title>
       </Head>
       {loading ? (
-        <Loading />
+        <main className='diary-detail-container'>
+          <h2>로딩</h2>
+          <p>로딩</p>
+          <p>로딩</p>
+          <p>로딩</p>
+          <style jsx>{`
+            main {
+              border-radius: 10px;
+              white-space: pre-wrap;
+              line-height: 1.6;
+              padding: 2rem;
+            }
+
+            h2,
+            p {
+              animation: skeleton-gradient 1.8s infinite ease-in-out;
+              color: transparent;
+            }
+
+            p {
+              margin: 0 0.5rem;
+            }
+
+            @keyframes skeleton-gradient {
+              0% {
+                background-color: rgba(165, 165, 165, 0.1);
+              }
+
+              50% {
+                background-color: rgba(165, 165, 165, 0.3);
+              }
+
+              100% {
+                background-color: rgba(165, 165, 165, 0.1);
+              }
+            }
+          `}</style>
+        </main>
       ) : (
         <>
           <GoBackButton />
