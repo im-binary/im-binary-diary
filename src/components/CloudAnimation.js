@@ -1,4 +1,9 @@
 import { css } from "styled-components";
+import nextConfig from "next/config";
+
+const { publicRuntimeConfig } = nextConfig();
+
+const ASSET_PREFIX = publicRuntimeConfig.ASSET_PREFIX;
 
 export default function CloudAnimation({ toggle, mode }) {
   return (
@@ -6,19 +11,19 @@ export default function CloudAnimation({ toggle, mode }) {
       {mode === "dark" ? (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className='img-moon' src='/moon.png' alt='moon' />
+          <img className='img-moon' src={`${ASSET_PREFIX}/moon.png`} alt='moon' />
           <div className='cloud-container' onClick={toggle}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className='img-cloud' src='/cloud.png' alt='cloud' />
+            <img className='img-cloud' src={`${ASSET_PREFIX}/cloud.png`} alt='cloud' />
           </div>
         </>
       ) : (
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className='img-sun' src='/sun.png' alt='sun' />
+          <img className='img-sun' src={`${ASSET_PREFIX}/sun.png`} alt='sun' />
           <div className='cloud-container' onClick={toggle}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className='img-cloud' src='/cloud.png' alt='cloud' />
+            <img className='img-cloud' src={`${ASSET_PREFIX}/cloud.png`} alt='cloud' />
           </div>
         </>
       )}
