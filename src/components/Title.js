@@ -13,7 +13,7 @@ export default function Title() {
       <header>
         <HelloDate />
         <h1>
-          <Link href={`/diary`}>
+          <Link href={`/`}>
             <a className='diary-home-btn'>DIARY</a>
           </Link>
         </h1>

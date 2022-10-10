@@ -90,7 +90,7 @@ export default function DiaryList() {
         <ul>
           {diaryList.map((diary) => (
             <li className='diary-box' key={diary.path}>
-              <Link href={`/diary/${diary.path}`}>
+              <Link href={`/${diary.path}`}>
                 <a>{diary.name}</a>
               </Link>
             </li>
