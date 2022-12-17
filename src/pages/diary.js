@@ -18,17 +18,29 @@ export default function DiaryList() {
   }, []);
 
   return loading ? (
-    <ul>
-      <li>
-        <a>로딩</a>
-      </li>
-      <li>
-        <a>로딩</a>
-      </li>
-      <li>
-        <a>로딩</a>
-      </li>
+    <>
+      <h1>2222</h1>
+      <ul>
+        <li>
+          <a>로딩</a>
+        </li>
+        <li>
+          <a>로딩</a>
+        </li>
+        <li>
+          <a>로딩</a>
+        </li>
+      </ul>
       <style jsx>{`
+        h1 {
+          transition: all 0.4s;
+          animation: skeleton-gradient 1.8s infinite ease-in-out;
+          color: transparent;
+          font-size: 1.6rem;
+          display: inline-block;
+          border-radius: 10px;
+        }
+
         ul {
           padding: 1rem 1.5rem;
           gap: 1.3rem;
@@ -80,7 +92,7 @@ export default function DiaryList() {
           }
         }
       `}</style>
-    </ul>
+    </>
   ) : (
     <>
       <nav>
@@ -109,6 +121,10 @@ export default function DiaryList() {
         nav {
           line-height: 1.9;
           font-family: "Jua", sans-serif;
+        }
+
+        h1 {
+          font-size: 1.6rem;
         }
 
         ul {
