@@ -1,8 +1,8 @@
 export default function HelloDate() {
-  const DateYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
   return (
     <h2>
-      {DateYear}
+      {currentYear}
       <style jsx>{`
         h2 {
           margin: 0;
