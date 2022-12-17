@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { fetchDiaryList } from "../services/diary";
 
 export default function DiaryList() {
@@ -83,19 +83,27 @@ export default function DiaryList() {
     </ul>
   ) : (
     <>
-      <Head>
-        <link href='https://fonts.googleapis.com/css?family=Jua:400&display=optional' rel='stylesheet' />
-      </Head>
       <nav>
-        <ul>
-          {diaryList.map((diary) => (
-            <li className='diary-box' key={diary.path}>
-              <Link href={`/${diary.path}`}>
-                <a>{diary.name}</a>
-              </Link>
-            </li>
+        {Object.keys(diaryList)
+          .sort((a, b) => b - a)
+          .map((year, index) => (
+            <Fragment key={`${year}-${index}`}>
+              <h1>{year}</h1>
+              <ul>
+                {diaryList[year].length === 0 ? (
+                  <li>없습니당</li>
+                ) : (
+                  diaryList[year].map((diary) => (
+                    <li className='diary-box' key={diary.path}>
+                      <Link href={`/${diary.path}`}>
+                        <a>{diary.name}</a>
+                      </Link>
+                    </li>
+                  ))
+                )}
+              </ul>
+            </Fragment>
           ))}
-        </ul>
       </nav>
       <style jsx>{`
         nav {
