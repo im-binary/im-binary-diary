@@ -25,7 +25,18 @@ export default async function handler(req, res) {
 
   const list = data.map((diary) => ({ name: diary.name, path: diary.path }));
 
-  listCache.set(`/${category}`, list);
+  const filteredList = {
+    [new Date().getFullYear()]: [],
+    ...list.reduce((acc, cur) => {
+      const year = cur.name.split("-")[0];
+      return {
+        ...acc,
+        [year]: [...(acc[year] ?? []), cur],
+      };
+    }, {}),
+  };
 
-  res.status(200).json({ list });
+  listCache.set(`/${category}`, filteredList);
+
+  res.status(200).json({ list: filteredList });
 }
