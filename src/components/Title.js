@@ -1,34 +1,34 @@
-/* eslint-disable @next/next/google-font-display */
-/* eslint-disable @next/next/no-page-custom-font */
-import Head from "next/head";
 import Link from "next/link";
 import HelloDate from "./HelloDate";
+import styled from "styled-components";
 
 export default function Title() {
   return (
-    <>
-      <Head>
-        <link href='https://fonts.googleapis.com/css?family=Jua:400' rel='stylesheet' />
-      </Head>
-      <header>
-        <HelloDate />
-        <h1>
-          <Link href={`/`}>
-            <a className='diary-home-btn'>DIARY</a>
-          </Link>
-        </h1>
-        <style jsx>{`
-          header {
-            display: flex;
-            height: 100px;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2px;
-            margin: 0 1.3rem 1rem;
-            font-family: "Jua", sans-serif;
-          }
-        `}</style>
-      </header>
-    </>
+    <Header>
+      <MainTitle>
+        <Link href={`/`}>
+          <a className='diary-home-btn'>DIARY</a>
+        </Link>
+      </MainTitle>
+      <HelloDate />
+    </Header>
   );
 }
+
+const Header = styled.header`
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  margin: 0 13px 10px;
+  font-family: "Jua", sans-serif;
+`;
+
+const MainTitle = styled.h1`
+  font-size: 3rem;
+
+  a:hover {
+    color: ${({ theme }) => theme.hoverColor};
+  }
+`;
