@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled, { css } from "styled-components";
 import nextConfig from "next/config";
 
@@ -17,10 +18,8 @@ export default function CloudAnimation({ toggle, mode }) {
   return (
     <Container>
       <button onClick={toggle}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className='mode-img' src={modeImageSrc(mode)} alt={mode} />
         <CloudImgContainer>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={`${ASSET_PREFIX}/cloud.png`} alt='cloud' />
         </CloudImgContainer>
       </button>
