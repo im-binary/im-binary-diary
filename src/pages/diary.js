@@ -102,7 +102,7 @@ const Ul = styled.ul`
     text-align: center;
     width: 100%;
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 1.8rem;
   }
 
   &.skeleton li {
