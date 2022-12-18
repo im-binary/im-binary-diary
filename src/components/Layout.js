@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { useTheme } from "../../context/themeProvider";
 import CloudAnimation from "./CloudAnimation";
 import Footer from "./Footer";
@@ -8,24 +9,23 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <section className='app-container'>
+      <Container>
         <Title />
         <CloudAnimation toggle={toggleTheme} mode={themeMode} />
-        <section>{children}</section>
-        <style jsx>{`
-          .app-container {
-            padding: 15px 10px 0;
-          }
-
-          .app-container section {
-            height: calc(100vh - 305px);
-            overflow: scroll;
-            z-index: 999;
-            position: relative;
-          }
-        `}</style>
-      </section>
+        <main>{children}</main>
+      </Container>
       <Footer />
     </>
   );
 }
+
+const Container = styled.section`
+  padding: 15px 10px 0;
+
+  main {
+    height: calc(100vh - 305px);
+    overflow: scroll;
+    z-index: 999;
+    position: relative;
+  }
+`;
