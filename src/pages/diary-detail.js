@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import GoBackButton from "../components/GoBackButton";
+import SquareButton from "../components/SquareButton";
 import { fetchDiaryDetail } from "../services/diary";
 import Head from "next/head";
 
@@ -81,7 +81,7 @@ export default function DiaryDetail() {
         </main>
       ) : (
         <>
-          <GoBackButton />
+          <SquareButton onClick={() => router.back()}>뒤로가기</SquareButton>
           <main className='diary-detail-container'>
             <h2>{diaryDate}</h2>
             <p>{content}</p>
