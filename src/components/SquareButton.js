@@ -5,8 +5,6 @@ export default function SquareButton({ onClick, children }) {
 }
 
 const Button = styled.button`
-  border: none;
-  cursor: pointer;
   padding: 8px 14px;
   font-weight: bold;
   position: absolute;
@@ -16,6 +14,7 @@ const Button = styled.button`
   transition: background-color 0.3s;
   background-color: transparent;
   color: ${({ theme }) => theme.color};
+  font-size: 1.4rem;
 
   &:hover {
     background-color: ${({ theme }) => theme.bgColor};

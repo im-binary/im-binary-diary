@@ -2,13 +2,11 @@ const Pongdang = () => (
   <span
     style={{
       color: "gray",
-      height: "1em",
-      marginLeft: "0.5rem",
-      outline: "none",
+      marginRight: "4px",
     }}
   >
     <a href='https://github.com/pongdang' target='_blank' rel='noreferrer'>
-      {"@pongdang. "}
+      {"@pongdang."}
     </a>
   </span>
 );
@@ -18,9 +16,10 @@ export default function Footer({ className }) {
     <footer
       className={className}
       style={{
-        padding: "1.9rem 0",
+        padding: "19px 0",
         textAlign: "center",
         margin: "0 auto",
+        fontSize: "1.4rem",
       }}
     >
       <Pongdang />

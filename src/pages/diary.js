@@ -36,14 +36,14 @@ export default function DiaryList() {
           transition: all 0.4s;
           animation: skeleton-gradient 1.8s infinite ease-in-out;
           color: transparent;
-          font-size: 1.6rem;
+          font-size: 2rem;
           display: inline-block;
           border-radius: 10px;
         }
 
         ul {
-          padding: 1rem 1.5rem;
-          gap: 1.3rem;
+          padding: 10px 15px;
+          gap: 13px;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
         }
@@ -61,8 +61,8 @@ export default function DiaryList() {
           display: inline-block;
           text-align: center;
           width: 100%;
-          padding: 1.8rem 1.5rem;
-          font-size: 1.2rem;
+          padding: 18px 15px;
+          font-size: 16px;
           opacity: 0;
         }
 
@@ -124,12 +124,12 @@ export default function DiaryList() {
         }
 
         h1 {
-          font-size: 1.6rem;
+          font-size: 2rem;
         }
 
         ul {
-          padding: 1rem 1.5rem;
-          gap: 1.3rem;
+          padding: 10px 15px;
+          gap: 13px;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
         }
@@ -147,8 +147,8 @@ export default function DiaryList() {
           display: inline-block;
           text-align: center;
           width: 100%;
-          padding: 1.8rem 1.5rem;
-          font-size: 1.2rem;
+          padding: 18px 15px;
+          font-size: 16px;
         }
 
         @media (max-width: 800px) {

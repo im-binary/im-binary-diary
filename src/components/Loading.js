@@ -31,14 +31,14 @@ export default function Loading() {
           background-color: gray;
           width: 300px;
           height: 18px;
-          margin: 0 0.5rem 0.5rem;
+          margin: 0 5px 5px;
           border-radius: 10px;
         }
 
         main {
           border-radius: 10px;
           line-height: 1.6;
-          padding: 2rem;
+          padding: 20px;
         }
 
         @keyframes skeleton-gradient {

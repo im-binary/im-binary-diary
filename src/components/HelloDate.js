@@ -6,18 +6,18 @@ export default function HelloDate() {
       <style jsx>{`
         h2 {
           margin: 0;
-          font-size: 80px;
+          font-size: 8rem;
         }
 
         @media (max-width: 422px) {
           h2 {
-            font-size: 50px;
+            font-size: 5rem;
           }
         }
 
         @media (max-width: 338px) {
           h2 {
-            font-size: 30px;
+            font-size: 3rem;
           }
         }
       `}</style>

@@ -51,7 +51,7 @@ export default function DiaryDetail() {
               border-radius: 10px;
               white-space: pre-wrap;
               line-height: 1.6;
-              padding: 2rem;
+              padding: 20px;
             }
 
             h2,
@@ -61,7 +61,7 @@ export default function DiaryDetail() {
             }
 
             p {
-              margin: 0 0.5rem;
+              margin: 0 5px;
             }
 
             @keyframes skeleton-gradient {
@@ -91,10 +91,16 @@ export default function DiaryDetail() {
               border-radius: 10px;
               white-space: pre-wrap;
               line-height: 1.6;
-              padding: 2rem;
+              padding: 20px;
             }
+
+            h2 {
+              font-size: 2rem;
+            }
+
             p {
-              margin: 0 0.5rem;
+              margin: 0 5px;
+              font-size: 1.6rem;
             }
           `}</style>
         </>
