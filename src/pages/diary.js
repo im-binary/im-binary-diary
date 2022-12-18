@@ -98,6 +98,11 @@ const Ul = styled.ul`
   li {
     border-radius: 10px;
     transition: all 0.4s;
+    box-shadow: ${({ theme }) => theme.boxShadow};
+  }
+
+  li:not(&.skeleton li):active {
+    box-shadow: ${({ theme }) => theme.insetBoxShadow};
   }
 
   li:hover {
