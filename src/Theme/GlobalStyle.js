@@ -1,43 +1,55 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+ :root {
+  font-size: 10px;
+ }
+
  body {
-    max-width: 1000px;
-    min-width: 255px;
-    margin: 0 auto;
-    background-color:${({ theme }) => theme.bgColor};
-    color:${({ theme }) => theme.color};
+  font-family: "Jua", sans-serif;
+  max-width: 1000px;
+  min-width: 255px;
+  margin: 0 auto;
+  background-color:${({ theme }) => theme.bgColor};
+  color:${({ theme }) => theme.color};
  }
 
- header, .app-container section {
-    color:${({ theme }) => theme.color};
- }
+ @keyframes skeleton-gradient {
+    0% {
+      background-color: rgba(165, 165, 165, 0.1);
+    }
 
- .diary-box {
-    box-shadow: ${({ theme }) => theme.boxShadow};
- }
+    50% {
+      background-color: rgba(165, 165, 165, 0.3);
+    }
 
- .diary-box:active {
-    box-shadow: ${({ theme }) => theme.insetBoxShadow};
- }
+    100% {
+      background-color: rgba(165, 165, 165, 0.1);
+    }
+  }
 
- .diary-detail-container {
-    background-color:${({ theme }) => theme.detailBgColor};
- }
+  @keyframes flow {
+    from {
+      transform: translate(-40%, 0);
+    }
+    to {
+      transform: translate(40%, 0);
+    }
 
- .backspace-button {
-    background-color:${({ theme }) => theme.bgColor};
-    color:${({ theme }) => theme.color};
- }
- 
- .footer-text {
-    color:${({ theme }) => theme.color};
-
- }
-
- .diary-home-btn:hover {
-   color:${({ theme }) => theme.hoverColor};
-
- }
- 
+    0% {
+      opacity: 0.6;
+    }
+    25% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 0.6;
+    }
+  }
 `;
