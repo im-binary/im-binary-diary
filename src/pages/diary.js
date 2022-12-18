@@ -25,7 +25,7 @@ export default function DiaryList() {
       {Object.keys(diaryList)
         .sort((a, b) => b - a)
         .map((year, index) => (
-          <Fragment key={`${year}-${index}`}>
+          <Container key={`${year}-${index}`}>
             <DiaryYear>{year}</DiaryYear>
             <Ul>
               {diaryList[year].length === 0 ? (
@@ -40,7 +40,7 @@ export default function DiaryList() {
                 ))
               )}
             </Ul>
-          </Fragment>
+          </Container>
         ))}
     </Nav>
   );
@@ -69,8 +69,15 @@ const Nav = styled.nav`
   line-height: 1.9;
 `;
 
+const Container = styled.div`
+  position: relative;
+`;
+
 const DiaryYear = styled.h1`
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin: 0 13px 10px;
+  position: sticky;
+  top: 0;
 
   &.skeleton {
     transition: all 0.4s;
@@ -83,8 +90,8 @@ const DiaryYear = styled.h1`
 `;
 
 const Ul = styled.ul`
-  padding: 10px 15px;
-  gap: 13px;
+  padding: 16px 24px;
+  gap: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -101,7 +108,7 @@ const Ul = styled.ul`
     display: inline-block;
     text-align: center;
     width: 100%;
-    padding: 18px 15px;
+    padding: 29px 24px;
     font-size: 1.8rem;
   }
 
@@ -114,14 +121,10 @@ const Ul = styled.ul`
   }
 
   @media (max-width: 800px) {
-    ul {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (max-width: 559px) {
-    ul {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
 `;
