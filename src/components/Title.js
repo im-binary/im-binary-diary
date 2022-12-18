@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HelloDate from "./HelloDate";
+import DateTitle from "./DateTitle";
 import styled from "styled-components";
 
 export default function Title() {
@@ -7,10 +7,10 @@ export default function Title() {
     <Header>
       <MainTitle>
         <Link href={`/`}>
-          <a className='diary-home-btn'>DIARY</a>
+          <a>DIARY</a>
         </Link>
       </MainTitle>
-      <HelloDate />
+      <DateTitle />
     </Header>
   );
 }
@@ -22,7 +22,6 @@ const Header = styled.header`
   align-items: center;
   gap: 2px;
   margin: 0 13px 10px;
-  font-family: "Jua", sans-serif;
 `;
 
 const MainTitle = styled.h1`
