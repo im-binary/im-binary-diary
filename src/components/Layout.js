@@ -24,8 +24,12 @@ const Container = styled.section`
 
   main {
     height: calc(100vh - 305px);
-    overflow: scroll;
+    overflow-y: scroll;
     z-index: 999;
     position: relative;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
   }
 `;
